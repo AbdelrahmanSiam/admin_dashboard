@@ -20,22 +20,23 @@ class CustomAllExpensesCard extends StatelessWidget {
         child: Column(
           children: [
             AllExpensesCardHeader(isActive: isActive, image: allExpensesModel.image),
+            SizedBox(height: 34),
             Text(
               allExpensesModel.title,
               style: isActive
                   ? AppStyles.styleSemiBold16.copyWith(color: Colors.white)
                   : AppStyles.styleSemiBold16,
             ),
-            SizedBox(height: 12),
+            SizedBox(height: 8),
             Text(
               "April 2022",
               style: isActive
                   ? AppStyles.styleRegular12.copyWith(color: Colors.white)
                   : AppStyles.styleRegular12,
             ),
-            SizedBox(height: 24),
+            SizedBox(height: 16),
             Text(
-              "20,129",
+              r"$20,129",
               style: isActive
                   ? AppStyles.styleSemiBold24.copyWith(color: Colors.white)
                   : AppStyles.styleSemiBold24,
