@@ -11,7 +11,7 @@ class DrawerItemsListView extends StatefulWidget {
 }
 
 class _DrawerItemsListViewState extends State<DrawerItemsListView> {
-  final int activeIndex = 0;
+  int activeIndex = 0;
   final List<DrawerItemModel> drawerList = [
     DrawerItemModel(
       title: "Dashboard",
@@ -45,7 +45,7 @@ class _DrawerItemsListViewState extends State<DrawerItemsListView> {
           onTap: () {
             if(activeIndex != index){
               setState(() {
-                activeIndex == index;
+                activeIndex = index;
               });
             }
           },
