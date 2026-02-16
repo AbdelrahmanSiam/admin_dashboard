@@ -3,8 +3,8 @@ import 'package:admin_dashboard/utils/app_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class CustomAllExpnesesCard extends StatelessWidget {
-  const CustomAllExpnesesCard({
+class CustomAllExpensesCard extends StatelessWidget {
+  const CustomAllExpensesCard({
     super.key,
     required this.image,
     required this.title,
