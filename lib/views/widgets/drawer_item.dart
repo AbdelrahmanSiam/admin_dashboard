@@ -5,8 +5,9 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 class DrawerItem extends StatelessWidget {
   const DrawerItem({
-    super.key, required this.drawerItemModel, required this.isActive,
-    
+    super.key,
+    required this.drawerItemModel,
+    required this.isActive,
   });
   final DrawerItemModel drawerItemModel;
   final bool isActive;
@@ -17,7 +18,16 @@ class DrawerItem extends StatelessWidget {
       color: Colors.white,
       child: ListTile(
         leading: SvgPicture.asset(drawerItemModel.image),
-        title: Text(drawerItemModel.title,style: isActive ? AppStyles.styleBold16 : AppStyles.styleMedium16,),
+        title: Text(
+          drawerItemModel.title,
+          style: isActive ? AppStyles.styleBold16 : AppStyles.styleMedium16,
+        ),
+        trailing: isActive
+            ? Container(
+                width: 3.72,
+                decoration: BoxDecoration(color: Color(0XFF4EB7F2)),
+              )
+            : SizedBox(),
       ),
     );
   }
