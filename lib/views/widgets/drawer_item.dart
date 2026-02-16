@@ -5,10 +5,11 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 class DrawerItem extends StatelessWidget {
   const DrawerItem({
-    super.key, required this.drawerItemModel,
+    super.key, required this.drawerItemModel, required this.isActive,
     
   });
   final DrawerItemModel drawerItemModel;
+  final bool isActive;
   @override
   Widget build(BuildContext context) {
     return Card(

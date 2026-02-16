@@ -3,12 +3,16 @@ import 'package:admin_dashboard/utils/app_images.dart';
 import 'package:admin_dashboard/views/widgets/drawer_item.dart';
 import 'package:flutter/material.dart';
 
-class DrawerItemsListView extends StatelessWidget {
-  const DrawerItemsListView({
-    super.key,
-  });
+class DrawerItemsListView extends StatefulWidget {
+  const DrawerItemsListView({super.key});
 
-  static const List<DrawerItemModel> drawerList = [
+  @override
+  State<DrawerItemsListView> createState() => _DrawerItemsListViewState();
+}
+
+class _DrawerItemsListViewState extends State<DrawerItemsListView> {
+  final int activeIndex = 0;
+  final List<DrawerItemModel> drawerList = [
     DrawerItemModel(
       title: "Dashboard",
       image: Assets.assetsImagesDashboardIcon,
@@ -30,7 +34,6 @@ class DrawerItemsListView extends StatelessWidget {
       image: Assets.assetsImagesInvestmentsIcon,
     ),
   ];
-
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
@@ -38,9 +41,21 @@ class DrawerItemsListView extends StatelessWidget {
       physics: NeverScrollableScrollPhysics(),
       itemCount: drawerList.length,
       itemBuilder: (context, index) {
-        return Padding(
-          padding: const EdgeInsets.only(top:20.0),
-          child: DrawerItem(drawerItemModel: drawerList[index]),
+        return GestureDetector(
+          onTap: () {
+            if(activeIndex != index){
+              setState(() {
+                activeIndex == index;
+              });
+            }
+          },
+          child: Padding(
+            padding: const EdgeInsets.only(top: 20.0),
+            child: DrawerItem(
+              drawerItemModel: drawerList[index],
+              isActive: activeIndex == index,
+            ),
+          ),
         );
       },
     );
