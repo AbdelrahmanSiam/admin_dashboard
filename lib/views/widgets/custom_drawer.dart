@@ -11,17 +11,18 @@ class CustomDrawer extends StatelessWidget {
       color: Colors.white,
       child: Column(
         children: [
-          SizedBox(height: 112,),
-          Container(
-            decoration: BoxDecoration(
-              color: Color(0XFFFAFAFA),
-              borderRadius: BorderRadius.circular(12),
+          SizedBox(height: 40),
+          Card(
+            elevation: 0,
+            color: Color(0XFFFAFAFA),
+            child: UserInfoListTile(
+              image: Assets.assetsImagesAvatar3,
+              title: "Lekan Okeowo",
+              subTitle: "demo@gmail.com",
             ),
-            child: UserInfoListTile(image: Assets.assetsImagesAvatar1,title: "Lekan Okeowo",subTitle: "demo@gmail.com",),
-          )
+          ),
         ],
       ),
     );
   }
 }
-

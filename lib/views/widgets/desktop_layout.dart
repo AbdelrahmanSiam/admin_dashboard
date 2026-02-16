@@ -6,10 +6,10 @@ class DesktopLayout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Expanded(child: CustomDrawer()),
-      ],
+    return  Row(
+        children: [
+          Expanded(child: CustomDrawer()),
+        ],
     );
   }
 }
