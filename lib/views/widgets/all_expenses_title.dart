@@ -19,7 +19,7 @@ class AllExpensesTitle extends StatelessWidget {
             child: Row(
               children: [
                 Text("Monthly",style: AppStyles.styleMedium16,),
-                Icon(Icons.arrow_downward),
+                Icon(Icons.keyboard_arrow_down,size:24),
               ],
             ),
           ),
