@@ -30,7 +30,7 @@ class CustomDrawer extends StatelessWidget {
               hasScrollBody: false, // all draw scroll from CustomScrollView
               child: Column(
                 children: [
-                  Expanded(child: SizedBox()),
+                  Expanded(child: SizedBox(height: 20,)),// 20 is the minimum height can be taken 
                   DrawerItem(
                     drawerItemModel: DrawerItemModel(
                       title: "Setting System",
