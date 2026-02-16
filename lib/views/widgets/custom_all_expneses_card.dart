@@ -19,7 +19,7 @@ class CustomAllExpensesCard extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
         child: Column(
           children: [
-            AllExpensesCardHeader(isActive: isActive, allExpensesModel: allExpensesModel),
+            AllExpensesCardHeader(isActive: isActive, image: allExpensesModel.image),
             Text(
               allExpensesModel.title,
               style: isActive

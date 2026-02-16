@@ -6,11 +6,11 @@ class AllExpensesCardHeader extends StatelessWidget {
   const AllExpensesCardHeader({
     super.key,
     required this.isActive,
-    required this.allExpensesModel,
+    required this.image,
   });
 
   final bool isActive;
-  final AllExpensesModel allExpensesModel;
+  final String image;
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +23,7 @@ class AllExpensesCardHeader extends StatelessWidget {
           ),
           child: Padding(
             padding: const EdgeInsets.all(4.0),
-            child: SvgPicture.asset(allExpensesModel.image),
+            child: SvgPicture.asset(image),
           ),
         ),
         Icon(
