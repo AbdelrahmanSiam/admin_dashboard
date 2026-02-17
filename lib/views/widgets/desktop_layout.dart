@@ -1,5 +1,6 @@
 import 'package:admin_dashboard/views/widgets/all_expenses_section.dart';
 import 'package:admin_dashboard/views/widgets/custom_drawer.dart';
+import 'package:admin_dashboard/views/widgets/quick_invoice_section.dart';
 import 'package:flutter/material.dart';
 
 class DesktopLayout extends StatelessWidget {
@@ -10,13 +11,22 @@ class DesktopLayout extends StatelessWidget {
     return Row(
       children: [
         Expanded(child: CustomDrawer()),
-        SizedBox(width: 32,),
+        SizedBox(width: 32),
         Expanded(
           flex: 3,
-          child: Column(children: [Expanded(child: AllExpensesSection())]),
+          child: Padding(
+            padding: const EdgeInsets.symmetric(vertical: 36.0),
+            child: Column(
+              children: [
+                Expanded(child: AllExpensesSection()),
+                SizedBox(height: 16),
+                Expanded(child: QuickInvoiceSection()),
+              ],
+            ),
+          ),
         ),
-        SizedBox(width: 32,),
-        Expanded(child: Placeholder(),flex: 2,),
+        SizedBox(width: 32),
+        Expanded(child: Placeholder(), flex: 2),
       ],
     );
   }
