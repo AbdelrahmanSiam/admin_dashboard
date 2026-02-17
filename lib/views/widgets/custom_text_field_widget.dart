@@ -1,22 +1,23 @@
+import 'package:admin_dashboard/models/custom_text_filed_model.dart';
 import 'package:admin_dashboard/utils/app_styles.dart';
 import 'package:flutter/material.dart';
 
 class CustomTextFieldWidget extends StatelessWidget {
-  const CustomTextFieldWidget({super.key, required this.text, required this.hintText});
-  final String text , hintText;
+  const CustomTextFieldWidget({super.key, required this.customTextFiledModel});
+  final CustomTextFiledModel customTextFiledModel;
   @override
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(text , style: AppStyles.styleMedium16,),
+        Text(customTextFiledModel.title , style: AppStyles.styleMedium16,),
         SizedBox(height: 12,),
         TextField(
           cursorColor: Color(0XFF4EB7F2),
           decoration: InputDecoration(
             filled: true,
             fillColor: Color(0XFFFAFAFA),
-            hintText: hintText,
+            hintText: customTextFiledModel.hintText,
             hintStyle: AppStyles.styleRegular16.copyWith(color: Color(0XFFAAAAAA),),
             border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(12),
