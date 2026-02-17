@@ -18,9 +18,9 @@ class DesktopLayout extends StatelessWidget {
             padding: const EdgeInsets.symmetric(vertical: 36.0),
             child: Column(
               children: [
-                Expanded(child: AllExpensesSection()),
-                SizedBox(height: 16),
-                Expanded(child: QuickInvoiceSection()),
+                AllExpensesSection(),
+                SizedBox(height: 24),
+                QuickInvoiceSection(),
               ],
             ),
           ),
