@@ -1,6 +1,7 @@
 import 'package:admin_dashboard/views/widgets/all_expenses_section.dart';
 import 'package:admin_dashboard/views/widgets/custom_drawer.dart';
 import 'package:admin_dashboard/views/widgets/quick_invoice_section.dart';
+import 'package:admin_dashboard/views/widgets/statistics_section.dart';
 import 'package:flutter/material.dart';
 
 class DesktopLayout extends StatelessWidget {
@@ -28,7 +29,7 @@ class DesktopLayout extends StatelessWidget {
           ),
         ),
         SizedBox(width: 32),
-        Expanded(child: Placeholder(), flex: 2),
+        Expanded(flex: 2, child: StatisticsSection()),
       ],
     );
   }
