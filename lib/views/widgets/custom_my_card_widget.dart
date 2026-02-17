@@ -13,7 +13,16 @@ class CustomMyCardWidget extends StatelessWidget {
       children: [
         Text("My Card", style: AppStyles.styleSemiBold20),
         SizedBox(height: 20),
-        SvgPicture.asset(Assets.assetsImagesCard1, color: Color(0XFF4EB7F2)),
+        AspectRatio(// already width will be responsive because parent is expanded but height must be responsive also so will use AspectRaito
+          aspectRatio: 450/215,
+          child: Container( 
+            decoration: BoxDecoration(
+              color: Color(0XFF4EB7F2),
+              borderRadius: BorderRadius.circular(12),
+            ),
+            child: SvgPicture.asset(Assets.assetsImagesCard1),
+          ),
+        ),
       ],
     );
   }

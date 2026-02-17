@@ -7,11 +7,14 @@ class StatisticsSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CustomBackgroundContainer(
-      padding: 20,
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [CustomMyCardWidget()]),
+    return Padding(
+      padding: const EdgeInsets.only(top: 40.0),
+      child: CustomBackgroundContainer(
+        padding: 20,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [CustomMyCardWidget()]),
+      ),
     );
   }
 }
