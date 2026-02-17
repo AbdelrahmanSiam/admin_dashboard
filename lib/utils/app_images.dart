@@ -30,6 +30,10 @@ class Assets {
   /// assets/images/expenses_icon.svg
   static const String assetsImagesExpensesIcon = "assets/images/expenses_icon.svg";
 
+  /// Assets for assetsImagesGallery
+  /// assets/images/gallery.svg
+  static const String assetsImagesGallery = "assets/images/gallery.svg";
+
   /// Assets for assetsImagesIncomeIcon
   /// assets/images/income_icon.svg
   static const String assetsImagesIncomeIcon = "assets/images/income_icon.svg";
