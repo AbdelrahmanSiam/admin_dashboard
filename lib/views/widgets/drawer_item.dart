@@ -18,9 +18,11 @@ class DrawerItem extends StatelessWidget {
       color: Colors.white,
       child: ListTile(
         leading: SvgPicture.asset(drawerItemModel.image),
-        title: Text(
-          drawerItemModel.title,
-          style: isActive ? AppStyles.styleBold16 : AppStyles.styleMedium16,
+        title: FittedBox(
+          child: Text(
+            drawerItemModel.title,
+            style: isActive ? AppStyles.styleBold16 : AppStyles.styleMedium16,
+          ),
         ),
         trailing: isActive
             ? Container(

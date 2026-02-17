@@ -15,7 +15,7 @@ class DesktopLayout extends StatelessWidget {
         Expanded(
           flex: 3,
           child: Padding(
-            padding: const EdgeInsets.symmetric(vertical: 36.0),
+            padding: const EdgeInsets.only(top: 40.0),
             child: SingleChildScrollView(
               child: Column(
                 children: [
