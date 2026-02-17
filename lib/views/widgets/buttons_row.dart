@@ -8,9 +8,9 @@ class ButtonsRow extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        CustomButton(text: "Add more details", isActive: false),
-        Spacer(),
-        CustomButton(text: "send Money", isActive: true),
+        Expanded(child: CustomButton(text: "Add more details", isActive: false)),
+        SizedBox(width: 24,),
+        Expanded(child: CustomButton(text: "send Money", isActive: true)),
       ],
     );
   }
