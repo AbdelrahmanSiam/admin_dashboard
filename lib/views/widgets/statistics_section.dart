@@ -13,7 +13,10 @@ class StatisticsSection extends StatelessWidget {
         padding: 20,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
-          children: [CustomMyCardWidget()]),
+          children: [
+            CustomMyCardWidget(),
+          ],
+        ),
       ),
     );
   }
