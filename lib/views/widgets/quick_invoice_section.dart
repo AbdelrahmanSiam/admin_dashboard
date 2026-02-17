@@ -1,3 +1,4 @@
+import 'package:admin_dashboard/views/widgets/quick_invoice_header.dart';
 import 'package:flutter/material.dart';
 
 class QuickInvoiceSection extends StatelessWidget {
@@ -12,6 +13,11 @@ class QuickInvoiceSection extends StatelessWidget {
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadiusGeometry.circular(12),
         ),
+      ),
+      child: Column(
+        children: [
+          QuickInvoiceHeader(),
+        ],
       ),
     );
   }
