@@ -15,14 +15,27 @@ class QuickInvoiceSection extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           QuickInvoiceHeader(),
-          SizedBox(height: 16,),
+          SizedBox(height: 16),
           LatestTransactionSection(),
-          Divider(height: 48,), // gives 24 from top and 24 from bottom
-          CustomTextFieldWidget(text: "Ahmed",hintText: "Ahmed",),
-          
+          Divider(height: 48), // gives 24 from top and 24 from bottom
+          SizedBox(
+            height: 250,
+            child: GridView.builder( // one child height 92
+              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
+              itemBuilder: (context, index) {
+                return Padding(
+                  padding: const EdgeInsets.only(right: 8.0),
+                  child: CustomTextFieldWidget(
+                    text: "text",
+                    hintText: "hintText",
+                  ),
+                );
+              },
+              itemCount: 4,
+            ),
+          ),
         ],
       ),
     );
   }
 }
-
