@@ -1,3 +1,4 @@
+import 'package:admin_dashboard/utils/app_styles.dart';
 import 'package:admin_dashboard/views/widgets/quick_invoice_header.dart';
 import 'package:flutter/material.dart';
 
@@ -15,8 +16,11 @@ class QuickInvoiceSection extends StatelessWidget {
         ),
       ),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           QuickInvoiceHeader(),
+          SizedBox(height: 16,),
+          Text("Latest Transaction",style: AppStyles.styleMedium16,),
         ],
       ),
     );
