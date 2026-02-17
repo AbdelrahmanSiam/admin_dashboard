@@ -18,7 +18,6 @@ class DesktopLayout extends StatelessWidget {
             padding: const EdgeInsets.symmetric(vertical: 36.0),
             child: SingleChildScrollView(
               child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   AllExpensesSection(),
                   SizedBox(height: 24),

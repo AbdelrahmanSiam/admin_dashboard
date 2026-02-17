@@ -12,6 +12,7 @@ class CustomTextFieldWidget extends StatelessWidget {
         Text(text , style: AppStyles.styleMedium16,),
         SizedBox(height: 5,),
         TextField(
+          cursorColor: Color(0XFF4EB7F2),
           decoration: InputDecoration(
             filled: true,
             fillColor: Color(0XFFFAFAFA),
@@ -19,6 +20,7 @@ class CustomTextFieldWidget extends StatelessWidget {
             hintStyle: AppStyles.styleRegular16.copyWith(color: Color(0XFFAAAAAA),),
             border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(12),
+              borderSide: BorderSide.none,
             ),
           ),
         ),
