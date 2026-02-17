@@ -16,11 +16,11 @@ class DesktopLayout extends StatelessWidget {
           flex: 3,
           child: Padding(
             padding: const EdgeInsets.symmetric(vertical: 36.0),
-            child: CustomScrollView(
-              slivers: [
-                SliverToBoxAdapter(child: AllExpensesSection()),
-                SliverToBoxAdapter(child: SizedBox(height: 16)),
-                SliverToBoxAdapter(child: QuickInvoiceSection()),
+            child: Column(
+              children: [
+                Expanded(child: AllExpensesSection()),
+                SizedBox(height: 16),
+                Expanded(child: QuickInvoiceSection()),
               ],
             ),
           ),

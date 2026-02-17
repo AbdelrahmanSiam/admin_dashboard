@@ -1,4 +1,5 @@
 import 'package:admin_dashboard/models/drawer_item_model.dart';
+import 'package:admin_dashboard/models/user_info_tile_model.dart';
 import 'package:admin_dashboard/utils/app_images.dart';
 import 'package:admin_dashboard/views/widgets/drawer_item.dart';
 import 'package:admin_dashboard/views/widgets/drawer_items_list_view.dart';
@@ -18,11 +19,7 @@ class CustomDrawer extends StatelessWidget {
           slivers: [
             SliverToBoxAdapter(child: SizedBox(height: 20)),
             SliverToBoxAdapter(
-              child: UserInfoListTile(
-                image: Assets.assetsImagesAvatar3,
-                title: "Lekan Okeowo",
-                subTitle: "demo@gmail.com",
-              ),
+              child: UserInfoListTile(userInfoTileModel: UserInfoTileModel(title: "Lekan Okeowo", subTitle: "demo@gmail.com", image: Assets.assetsImagesAvatar3))
             ),
             SliverToBoxAdapter(child: SizedBox(height: 8)),
             DrawerItemsListView(), // sliverList does not use SliverToBoxAdapter
