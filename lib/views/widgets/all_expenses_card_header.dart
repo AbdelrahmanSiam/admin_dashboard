@@ -22,7 +22,7 @@ class AllExpensesCardHeader extends StatelessWidget {
           ),
           child: Padding(
             padding: const EdgeInsets.all(4.0),
-            child: SvgPicture.asset(image),
+            child: SvgPicture.asset(image,color: isActive? Colors.white : Color(0XFF4EB7F2,),),
           ),
         ),
         Spacer(),
