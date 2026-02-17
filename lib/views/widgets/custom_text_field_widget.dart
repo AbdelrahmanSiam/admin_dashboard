@@ -10,7 +10,7 @@ class CustomTextFieldWidget extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(text , style: AppStyles.styleMedium16,),
-        SizedBox(height: 5,),
+        SizedBox(height: 12,),
         TextField(
           cursorColor: Color(0XFF4EB7F2),
           decoration: InputDecoration(
