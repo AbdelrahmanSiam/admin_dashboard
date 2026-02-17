@@ -1,4 +1,5 @@
 import 'package:admin_dashboard/views/widgets/custom_background_container.dart';
+import 'package:admin_dashboard/views/widgets/custom_text_field_grid_view.dart';
 import 'package:admin_dashboard/views/widgets/custom_text_field_widget.dart';
 import 'package:admin_dashboard/views/widgets/quick_invoice_header.dart';
 import 'package:admin_dashboard/views/widgets/latest_transaction_section.dart';
@@ -18,24 +19,35 @@ class QuickInvoiceSection extends StatelessWidget {
           SizedBox(height: 16),
           LatestTransactionSection(),
           Divider(height: 48), // gives 24 from top and 24 from bottom
-          SizedBox(
-            height: 250,
-            child: GridView.builder( // one child height 92
-              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
-              itemBuilder: (context, index) {
-                return Padding(
-                  padding: const EdgeInsets.only(right: 8.0),
-                  child: CustomTextFieldWidget(
-                    text: "text",
-                    hintText: "hintText",
-                  ),
-                );
-              },
-              itemCount: 4,
+          class CustomTextFeildGridView extends StatelessWidget {
+  const CustomTextFeildGridView({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      height: 250,
+      child: GridView.builder( // one child height 92
+        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
+        itemBuilder: (context, index) {
+          return Padding(
+            padding: const EdgeInsets.only(right: 8.0),
+            child: CustomTextFieldWidget(
+              text: "text",
+              hintText: "hintText",
             ),
-          ),
+          );
+        },
+        itemCount: 4,
+      ),
+    );
+  }
+}
+(),
         ],
       ),
     );
   }
 }
+
