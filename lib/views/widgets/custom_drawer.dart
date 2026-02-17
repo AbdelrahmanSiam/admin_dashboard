@@ -6,8 +6,8 @@ import 'package:admin_dashboard/views/widgets/drawer_items_list_view.dart';
 import 'package:admin_dashboard/views/widgets/user_info_list_tile.dart';
 import 'package:flutter/material.dart';
 
-class CustomDrawer extends StatelessWidget {
-  const CustomDrawer({super.key});
+class CustomDrawerSection extends StatelessWidget {
+  const CustomDrawerSection({super.key});
 
   @override
   Widget build(BuildContext context) {

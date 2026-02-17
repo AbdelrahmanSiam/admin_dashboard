@@ -11,7 +11,7 @@ class DesktopLayout extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Expanded(child: CustomDrawer()),
+        Expanded(child: CustomDrawerSection()),
         SizedBox(width: 32),
         Expanded(
           flex: 3,
@@ -29,7 +29,10 @@ class DesktopLayout extends StatelessWidget {
           ),
         ),
         SizedBox(width: 32),
-        Expanded(flex: 2, child: StatisticsSection()),
+        Expanded(flex: 2, child: Padding(
+          padding: const EdgeInsets.only(top: 40.0),
+          child: StatisticsSection(),
+        )),
       ],
     );
   }
