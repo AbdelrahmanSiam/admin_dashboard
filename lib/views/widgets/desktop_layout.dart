@@ -16,12 +16,15 @@ class DesktopLayout extends StatelessWidget {
           flex: 3,
           child: Padding(
             padding: const EdgeInsets.symmetric(vertical: 36.0),
-            child: Column(
-              children: [
-                AllExpensesSection(),
-                SizedBox(height: 24),
-                QuickInvoiceSection(),
-              ],
+            child: SingleChildScrollView(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  AllExpensesSection(),
+                  SizedBox(height: 24),
+                  QuickInvoiceSection(),
+                ],
+              ),
             ),
           ),
         ),

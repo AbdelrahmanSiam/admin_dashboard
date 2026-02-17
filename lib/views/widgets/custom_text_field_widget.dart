@@ -7,6 +7,7 @@ class CustomTextFieldWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(text , style: AppStyles.styleMedium16,),
         SizedBox(height: 5,),
