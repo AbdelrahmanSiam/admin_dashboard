@@ -19,6 +19,7 @@ class QuickInvoiceSection extends StatelessWidget {
           LatestTransactionSection(),
           Divider(height: 48), // gives 24 from top and 24 from bottom
           CustomTextFieldGridView(),
+          Text("data")
         ],
       ),
     );

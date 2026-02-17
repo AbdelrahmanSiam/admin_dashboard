@@ -19,17 +19,18 @@ class CustomTextFieldGridView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 250,
+      height: 184,
       child: GridView.builder(
         // one child height 92
+        physics: NeverScrollableScrollPhysics(),
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 2,
+          crossAxisSpacing: 8,
+          mainAxisSpacing: 0,
+          mainAxisExtent: 92,
         ),
         itemBuilder: (context, index) {
-          return Padding(
-            padding: const EdgeInsets.only(right: 8.0),
-            child: CustomTextFieldWidget(customTextFiledModel: list[index]),
-          );
+          return CustomTextFieldWidget(customTextFiledModel: list[index]);
         },
         itemCount: 4,
       ),
