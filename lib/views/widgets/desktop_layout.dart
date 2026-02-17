@@ -1,4 +1,4 @@
-import 'package:admin_dashboard/views/widgets/all_expenses.dart';
+import 'package:admin_dashboard/views/widgets/all_expenses_section.dart';
 import 'package:admin_dashboard/views/widgets/custom_drawer.dart';
 import 'package:flutter/material.dart';
 
@@ -13,7 +13,7 @@ class DesktopLayout extends StatelessWidget {
         SizedBox(width: 32,),
         Expanded(
           flex: 3,
-          child: Column(children: [Expanded(child: AllExpenses())]),
+          child: Column(children: [Expanded(child: AllExpensesSection())]),
         ),
         SizedBox(width: 32,),
         Expanded(child: Placeholder(),flex: 2,),
