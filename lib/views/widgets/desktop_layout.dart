@@ -1,5 +1,6 @@
 import 'package:admin_dashboard/views/widgets/all_expenses_section.dart';
 import 'package:admin_dashboard/views/widgets/custom_drawer.dart';
+import 'package:admin_dashboard/views/widgets/desktop_middle_section.dart';
 import 'package:admin_dashboard/views/widgets/quick_invoice_section.dart';
 import 'package:admin_dashboard/views/widgets/statistics_section.dart';
 import 'package:flutter/material.dart';
@@ -15,18 +16,7 @@ class DesktopLayout extends StatelessWidget {
         SizedBox(width: 32),
         Expanded(
           flex: 3,
-          child: Padding(
-            padding: const EdgeInsets.only(top: 40.0),
-            child: SingleChildScrollView(
-              child: Column(
-                children: [
-                  AllExpensesSection(),
-                  SizedBox(height: 24),
-                  QuickInvoiceSection(),
-                ],
-              ),
-            ),
-          ),
+          child: DesktopMiddleSection(),
         ),
         SizedBox(width: 32),
         Expanded(flex: 2, child: Padding(
@@ -37,3 +27,4 @@ class DesktopLayout extends StatelessWidget {
     );
   }
 }
+
