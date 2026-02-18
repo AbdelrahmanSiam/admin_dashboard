@@ -1,16 +1,16 @@
 import 'package:admin_dashboard/utils/app_styles.dart';
 import 'package:flutter/material.dart';
 
-class AllExpensesTitle extends StatelessWidget {
-  const AllExpensesTitle({
-    super.key,
+class CustomHeader extends StatelessWidget {
+  const CustomHeader({
+    super.key, required this.title,
   });
-
+ final String title;
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Text("AllExpenses",style: AppStyles.styleSemiBold20,),
+        Text(title,style: AppStyles.styleSemiBold20,),
         Expanded(child: SizedBox()),
         Card(
           color: Colors.white,

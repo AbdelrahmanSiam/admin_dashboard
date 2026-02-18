@@ -1,5 +1,5 @@
 import 'package:admin_dashboard/views/widgets/all_expenses_items.dart';
-import 'package:admin_dashboard/views/widgets/all_expenses_title.dart';
+import 'package:admin_dashboard/views/widgets/custom_header.dart';
 import 'package:admin_dashboard/views/widgets/custom_background_container.dart';
 import 'package:flutter/material.dart';
 
@@ -17,7 +17,7 @@ class _AllExpensesSectionState extends State<AllExpensesSection> {
       padding: 20,
       child: Column(
         children: [
-          AllExpensesTitle(),
+          CustomHeader(title: "AllExpenses",),
           SizedBox(height: 16),
           AllExpensesItems(),
         ],

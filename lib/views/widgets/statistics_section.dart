@@ -2,6 +2,7 @@ import 'package:admin_dashboard/utils/app_styles.dart';
 import 'package:admin_dashboard/views/widgets/card_page_view.dart';
 import 'package:admin_dashboard/views/widgets/custom_background_container.dart';
 import 'package:admin_dashboard/views/widgets/dots_indicator.dart';
+import 'package:admin_dashboard/views/widgets/income_section.dart';
 import 'package:admin_dashboard/views/widgets/my_card_and_transaction_section.dart';
 import 'package:admin_dashboard/views/widgets/transaction_section.dart';
 import 'package:flutter/material.dart';
@@ -16,6 +17,8 @@ class StatisticsSection extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               MyCardAndTransactionSection(),
+              SizedBox(height: 20,),
+              IncomeSection(),
             ],
           ),
     );
