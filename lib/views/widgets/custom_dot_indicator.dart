@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
 
 class CustomDotIndicator extends StatelessWidget {
-  const CustomDotIndicator({super.key});
-
+  const CustomDotIndicator({super.key, required this.isActive});
+ final bool isActive;
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: 8,
+    return AnimatedContainer(
+      duration: Duration(milliseconds: 300),
+      width: isActive ? 32 : 8,
       height: 8,
       decoration: ShapeDecoration(
-        color: Color(0XFF4EB7F2),
+        color: isActive ? Color(0XFF4EB7F2) : Color(0XFFE7E7E7),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(12),
         )
