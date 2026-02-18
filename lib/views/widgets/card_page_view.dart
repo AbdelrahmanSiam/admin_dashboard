@@ -1,4 +1,5 @@
 import 'package:admin_dashboard/views/widgets/custom_my_card_widget.dart';
+import 'package:expandable_page_view/expandable_page_view.dart';
 import 'package:flutter/material.dart';
 
 class CardPageView extends StatelessWidget {
@@ -6,12 +7,10 @@ class CardPageView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return PageView.builder(
+    return ExpandablePageView(
       scrollDirection: Axis.horizontal,
-      itemCount: 3,
-      itemBuilder: (context , index){
-      return CustomMyCardWidget();
-    },);
+      children: List.generate(3, (index) => CustomMyCardWidget(),),
+    );
   }
 }
 // I want each child(card) calc its height and return it to parent , we can not use builder method in the parent , this case used with fixed number of children => We will use ExpandablePageView package
