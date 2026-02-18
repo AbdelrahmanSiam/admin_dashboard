@@ -1,10 +1,29 @@
 import 'package:admin_dashboard/utils/app_styles.dart';
 import 'package:admin_dashboard/views/widgets/card_page_view.dart';
 import 'package:admin_dashboard/views/widgets/custom_background_container.dart';
+import 'package:admin_dashboard/views/widgets/dots_indicator.dart';
 import 'package:flutter/material.dart';
 
-class StatisticsSection extends StatelessWidget {
+class StatisticsSection extends StatefulWidget {
   const StatisticsSection({super.key});
+
+  @override
+  State<StatisticsSection> createState() => _StatisticsSectionState();
+}
+
+class _StatisticsSectionState extends State<StatisticsSection> {
+  late PageController pageController;
+  int currentPageIndex = 0;
+
+  @override
+  void initState() {
+    pageController = PageController();
+    pageController.addListener(() {
+      currentPageIndex = pageController.page!.round();
+      setState(() {});
+    });
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +36,9 @@ class StatisticsSection extends StatelessWidget {
           children: [
             Text("My Card", style: AppStyles.styleSemiBold20),
             SizedBox(height: 20),
-            Expanded(child: CardPageView()),
+            CardPageView(pageController: pageController,),
+            SizedBox(height: 20),
+            DotsIndicator(currentPageIndex: currentPageIndex,),
           ],
         ),
       ),
