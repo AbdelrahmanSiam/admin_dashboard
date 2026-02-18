@@ -11,7 +11,7 @@ class StatisticsSection extends StatelessWidget {
       padding: const EdgeInsets.only(right: 32.0),
       child: SingleChildScrollView(
         child: SizedBox(
-          height: 1000,
+          height: 1150,
           child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
