@@ -7,9 +7,11 @@ class CardPageView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return PageView.builder(
+      scrollDirection: Axis.horizontal,
       itemCount: 3,
       itemBuilder: (context , index){
       return CustomMyCardWidget();
-    });
+    },);
   }
 }
+// I want each child(card) calc its height and return it to parent , we can not use builder method in the parent , this case used with fixed number of children => We will use ExpandablePageView package

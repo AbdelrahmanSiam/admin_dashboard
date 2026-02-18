@@ -1,5 +1,6 @@
+import 'package:admin_dashboard/utils/app_styles.dart';
+import 'package:admin_dashboard/views/widgets/card_page_view.dart';
 import 'package:admin_dashboard/views/widgets/custom_background_container.dart';
-import 'package:admin_dashboard/views/widgets/custom_my_card_widget.dart';
 import 'package:flutter/material.dart';
 
 class StatisticsSection extends StatelessWidget {
@@ -14,7 +15,9 @@ class StatisticsSection extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            CustomMyCardWidget(),
+            Text("My Card", style: AppStyles.styleSemiBold20),
+            SizedBox(height: 20),
+            Expanded(child: CardPageView()),
           ],
         ),
       ),

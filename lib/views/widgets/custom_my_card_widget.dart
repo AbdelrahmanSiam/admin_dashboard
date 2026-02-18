@@ -8,17 +8,13 @@ class CustomMyCardWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text("My Card", style: AppStyles.styleSemiBold20),
-        SizedBox(height: 20),
-        AspectRatio(
+    return AspectRatio(
           // already width will be responsive because parent is expanded but height must be responsive also so will use AspectRaito
           aspectRatio: 450 / 215,
           child: Container(
             decoration: BoxDecoration(
               image: DecorationImage(
+                fit: BoxFit.fill,
                 image: AssetImage(Assets.assetsImagesCard),
               ),
               color: Color(0XFF4EB7F2),
@@ -63,8 +59,6 @@ class CustomMyCardWidget extends StatelessWidget {
               ],
             ),
           ),
-        ),
-      ],
-    );
+        );
   }
 }
