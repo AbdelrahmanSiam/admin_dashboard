@@ -9,7 +9,7 @@ class IncomeSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return CustomBackgroundContainer(
       padding: 20,
-      child: Column(children: [CustomHeader(title: "Income")]),
+      child: Column(children: [CustomHeader(title: "Income"),]),
     );
   }
 }
