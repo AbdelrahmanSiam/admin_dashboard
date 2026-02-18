@@ -7,17 +7,20 @@ class StatisticsSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Padding(
-        padding: const EdgeInsets.only(right: 32.0),
-        child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                MyCardAndTransactionSection(),
-                SizedBox(height: 20,),
-                IncomeSection(),
-              ],
-            ),
+    return Padding(
+      padding: const EdgeInsets.only(right: 32.0),
+      child: SingleChildScrollView(
+        child: SizedBox(
+          height: 1000,
+          child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  MyCardAndTransactionSection(),
+                  SizedBox(height: 24,),
+                  Expanded(child: IncomeSection()),
+                ],
+              ),
+        ),
       ),
     );
   }
