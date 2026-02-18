@@ -9,16 +9,13 @@ class DesktopMiddleSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(top: 40.0),
-      child: SingleChildScrollView(
-        child: Column(
-          children: [
-            AllExpensesSection(),
-            SizedBox(height: 24),
-            QuickInvoiceSection(),
-          ],
-        ),
+    return SingleChildScrollView(
+      child: Column(
+        children: [
+          AllExpensesSection(),
+          SizedBox(height: 24),
+          QuickInvoiceSection(),
+        ],
       ),
     );
   }
