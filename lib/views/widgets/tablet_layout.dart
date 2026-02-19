@@ -25,7 +25,10 @@ class TabletLayout extends StatelessWidget {
                     padding: const EdgeInsets.only(right: 32.0),
                     child: DesktopMiddleSection(),
                   ),
-                  StatisticsSection(),
+                  Padding(
+                    padding: const EdgeInsets.only(right: 32.0),
+                    child: StatisticsSection(),
+                  ),
                   SizedBox(height: 24,),
                 ],
               ),

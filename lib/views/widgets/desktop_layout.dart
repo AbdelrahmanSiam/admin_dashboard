@@ -12,12 +12,33 @@ class DesktopLayout extends StatelessWidget {
       children: [
         Expanded(child: CustomDrawerSection()),
         SizedBox(width: 32),
-        Expanded(flex: 3, child: Padding(
-          padding: const EdgeInsets.only(top:40.0),
-          child: DesktopMiddleSection(),
-        )),
-        SizedBox(width: 32),
-        Expanded(flex: 2, child: StatisticsSection()),
+        Expanded(
+          flex: 3,
+          child: CustomScrollView(
+            slivers: [
+              SliverFillRemaining(
+                hasScrollBody: false,
+                child: Row(
+                  children: [
+                    Expanded(
+                      child: Padding(
+                        padding: const EdgeInsets.only(top: 40.0),
+                        child: DesktopMiddleSection(),
+                      ),
+                    ),
+                    SizedBox(width: 32),
+                    Expanded(
+                      child: Padding(
+                        padding: const EdgeInsets.only(right: 32.0),
+                        child: StatisticsSection(),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
       ],
     );
   }

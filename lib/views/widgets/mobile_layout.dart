@@ -1,4 +1,5 @@
 import 'package:admin_dashboard/views/widgets/desktop_middle_section.dart';
+import 'package:admin_dashboard/views/widgets/statistics_section.dart';
 import 'package:flutter/material.dart';
 
 class MobileLayout extends StatelessWidget {
@@ -6,6 +7,14 @@ class MobileLayout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return DesktopMiddleSection() ;
+    return SingleChildScrollView(
+      child: Column(
+        children: [
+          DesktopMiddleSection(),
+          StatisticsSection(),
+          SizedBox(height: 24),
+        ],
+      ),
+    );
   }
 }

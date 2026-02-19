@@ -9,14 +9,12 @@ class DesktopMiddleSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Column(
-        children: [
-          AllExpensesSection(),
-          SizedBox(height: 24),
-          QuickInvoiceSection(),
-        ],
-      ),
+    return Column(
+      children: [
+        AllExpensesSection(),
+        SizedBox(height: 24),
+        QuickInvoiceSection(),
+      ],
     );
   }
 }

@@ -23,9 +23,12 @@ class ItemDetails extends StatelessWidget {
           style: AppStyles.styleRegular16.copyWith(color: Color(0XFF064061)),
         ),
       ),
-      trailing: Text(
-        itemDetailsModel.percentage,
-        style: AppStyles.styleMedium16.copyWith(color: Color(0XFF208CC8)),
+      trailing: FittedBox(
+        fit: BoxFit.scaleDown,
+        child: Text(
+          itemDetailsModel.percentage,
+          style: AppStyles.styleMedium16.copyWith(color: Color(0XFF208CC8)),
+        ),
       ),
     );
   }
