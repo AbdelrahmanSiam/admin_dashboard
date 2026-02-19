@@ -16,19 +16,13 @@ class ItemDetails extends StatelessWidget {
           borderRadius: BorderRadius.circular(12),
         ),
       ),
-      title: FittedBox(
-        fit: BoxFit.scaleDown,
-        child: Text(
-          itemDetailsModel.title,
-          style: AppStyles.styleRegular16.copyWith(color: Color(0XFF064061)),
-        ),
+      title: Text(
+        itemDetailsModel.title,
+        style: AppStyles.styleRegular16(context).copyWith(color: Color(0XFF064061)),
       ),
-      trailing: FittedBox(
-        fit: BoxFit.scaleDown,
-        child: Text(
-          itemDetailsModel.percentage,
-          style: AppStyles.styleMedium16.copyWith(color: Color(0XFF208CC8)),
-        ),
+      trailing: Text(
+        itemDetailsModel.percentage,
+        style: AppStyles.styleMedium16(context).copyWith(color: Color(0XFF208CC8)),
       ),
     );
   }

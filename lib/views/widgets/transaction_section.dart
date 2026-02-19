@@ -13,7 +13,7 @@ class TransactionSection extends StatelessWidget {
       children: [
         TransactionHeader(),
         SizedBox(height: 20),
-        Text("13 April 2022" , style: AppStyles.styleMedium16.copyWith(color: Color(0XFFAAAAAA),),),
+        Text("13 April 2022" , style: AppStyles.styleMedium16(context).copyWith(color: Color(0XFFAAAAAA),),),
         SizedBox(height: 16),
         TransactionContainer(title: "Cash Withdrawal", subTitle: "13 Apr, 2022 ", salary: r"$20,129",color: Colors.red,),
         SizedBox(height: 10),

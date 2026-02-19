@@ -27,11 +27,11 @@ class CustomMyCardWidget extends StatelessWidget {
                   contentPadding: EdgeInsets.only(left: 31, right: 42, top: 16),
                   title: Text(
                     "Name card",
-                    style: AppStyles.styleRegular16.copyWith(
+                    style: AppStyles.styleRegular16(context).copyWith(
                       color: Colors.white,
                     ),
                   ),
-                  subtitle: Text("Syah Bandi", style: AppStyles.styleMedium20),
+                  subtitle: Text("Syah Bandi", style: AppStyles.styleMedium20(context)),
                   trailing: SvgPicture.asset(Assets.assetsImagesGallery),
                 ),
                 Spacer(),
@@ -42,13 +42,13 @@ class CustomMyCardWidget extends StatelessWidget {
                     children: [
                       Text(
                         "0918 8124 0042 8129",
-                        style: AppStyles.styleSemiBold24.copyWith(
+                        style: AppStyles.styleSemiBold24(context).copyWith(
                           color: Colors.white,
                         ),
                       ),
                       Text(
                         "12/20 - 124",
-                        style: AppStyles.styleRegular16.copyWith(
+                        style: AppStyles.styleRegular16(context).copyWith(
                           color: Colors.white,
                         ),
                       ),

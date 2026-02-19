@@ -13,9 +13,9 @@ class TransactionContainer extends StatelessWidget {
         borderRadius: BorderRadius.circular(12),
       ),
       child: ListTile(
-        title: Text(title,style: AppStyles.styleSemiBold16,),
-        subtitle: Text(subTitle,style: AppStyles.styleRegular16.copyWith(color: Color(0XFFAAAAAA)),),
-        trailing: Text(salary,style: AppStyles.styleSemiBold20.copyWith(color: color),),
+        title: Text(title,style: AppStyles.styleSemiBold16(context),),
+        subtitle: Text(subTitle,style: AppStyles.styleRegular16(context).copyWith(color: Color(0XFFAAAAAA)),),
+        trailing: Text(salary,style: AppStyles.styleSemiBold20(context).copyWith(color: color),),
       ),
     );
   }

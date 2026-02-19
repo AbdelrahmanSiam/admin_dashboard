@@ -10,7 +10,7 @@ class CustomTextFieldWidget extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(customTextFiledModel.title , style: AppStyles.styleMedium16,),
+        Text(customTextFiledModel.title , style: AppStyles.styleMedium16(context),),
         SizedBox(height: 12,),
         TextField(
           cursorColor: Color(0XFF4EB7F2),
@@ -18,7 +18,7 @@ class CustomTextFieldWidget extends StatelessWidget {
             filled: true,
             fillColor: Color(0XFFFAFAFA),
             hintText: customTextFiledModel.hintText,
-            hintStyle: AppStyles.styleRegular16.copyWith(color: Color(0XFFAAAAAA),),
+            hintStyle: AppStyles.styleRegular16(context).copyWith(color: Color(0XFFAAAAAA),),
             border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(12),
               borderSide: BorderSide.none,

@@ -21,14 +21,11 @@ class CustomAllExpensesCard extends StatelessWidget {
           children: [
             AllExpensesCardHeader(isActive: isActive, image: allExpensesModel.image),
             SizedBox(height: 34),
-            FittedBox(
-              fit: BoxFit.scaleDown,
-              child: Text(
-                allExpensesModel.title,
-                style: isActive
-                    ? AppStyles.styleSemiBold16.copyWith(color: Colors.white)
-                    : AppStyles.styleSemiBold16,
-              ),
+            Text(
+              allExpensesModel.title,
+              style: isActive
+                  ? AppStyles.styleSemiBold16(context).copyWith(color: Colors.white)
+                  : AppStyles.styleSemiBold16(context),
             ),
             SizedBox(height: 8),
             FittedBox(
@@ -36,8 +33,8 @@ class CustomAllExpensesCard extends StatelessWidget {
               child: Text(
                 "April 2022",
                 style: isActive
-                    ? AppStyles.styleRegular12.copyWith(color: Colors.white)
-                    : AppStyles.styleRegular12,
+                    ? AppStyles.styleRegular12(context).copyWith(color: Colors.white)
+                    : AppStyles.styleRegular12(context),
               ),
             ),
             SizedBox(height: 16),
@@ -46,8 +43,8 @@ class CustomAllExpensesCard extends StatelessWidget {
               child: Text(
                 r"$20,129",
                 style: isActive
-                    ? AppStyles.styleSemiBold24.copyWith(color: Colors.white)
-                    : AppStyles.styleSemiBold24,
+                    ? AppStyles.styleSemiBold24(context).copyWith(color: Colors.white)
+                    : AppStyles.styleSemiBold24(context),
               ),
             ),
           ],

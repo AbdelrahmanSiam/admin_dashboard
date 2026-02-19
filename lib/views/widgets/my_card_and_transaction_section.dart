@@ -35,7 +35,7 @@ class _MyCardAndTransactionSectionState extends State<MyCardAndTransactionSectio
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text("My Card", style: AppStyles.styleSemiBold20),
+            Text("My Card", style: AppStyles.styleSemiBold20(context)),
             SizedBox(height: 20),
             CardPageView(pageController: pageController,),
             SizedBox(height: 20),

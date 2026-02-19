@@ -8,9 +8,9 @@ class TransactionHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Text("Transcation History" ,style: AppStyles.styleSemiBold20,),
+        Text("Transcation History" ,style: AppStyles.styleSemiBold20(context),),
         Spacer(),
-        Text("see all",style: AppStyles.styleMedium16.copyWith(color: Color(0XFF4EB7F2),),),
+        Text("see all",style: AppStyles.styleMedium16(context).copyWith(color: Color(0XFF4EB7F2),),),
       ],
     );
   }

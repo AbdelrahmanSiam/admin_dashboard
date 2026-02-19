@@ -10,7 +10,7 @@ class CustomHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Text(title,style: AppStyles.styleSemiBold20,),
+        Text(title,style: AppStyles.styleSemiBold20(context),),
         Expanded(child: SizedBox()),
         Card(
           color: Colors.white,
@@ -18,7 +18,7 @@ class CustomHeader extends StatelessWidget {
             padding: const EdgeInsets.all(8.0),
             child: Row(
               children: [
-                Text("Monthly",style: AppStyles.styleMedium16,),
+                Text("Monthly",style: AppStyles.styleMedium16(context),),
                 Icon(Icons.keyboard_arrow_down,size:24),
               ],
             ),
