@@ -1,3 +1,4 @@
+import 'package:admin_dashboard/utils/size_config.dart';
 import 'package:admin_dashboard/views/widgets/adaptive_layout.dart';
 import 'package:admin_dashboard/views/widgets/custom_drawer.dart';
 import 'package:admin_dashboard/views/widgets/desktop_layout.dart';
@@ -13,20 +14,25 @@ class DashboardView extends StatefulWidget {
 }
 
 class _DashboardViewState extends State<DashboardView> {
-  final GlobalKey <ScaffoldState> scaffoldKey = GlobalKey();
+  final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
-      drawer:MediaQuery.sizeOf(context).width < 600 ? CustomDrawerSection():null,
-      appBar: MediaQuery.sizeOf(context).width < 600 ? AppBar(
-        backgroundColor: Colors.black,
-        leading: IconButton(
-          onPressed: () {
-            scaffoldKey.currentState!.openDrawer();
-          },
-          icon: Icon(Icons.menu , color: Color(0XFF4EB7F2),)),
-      ):null,
+      drawer: MediaQuery.sizeOf(context).width < SizeConfig.tablet
+          ? CustomDrawerSection()
+          : null,
+      appBar: MediaQuery.sizeOf(context).width < SizeConfig.tablet
+          ? AppBar(
+              backgroundColor: Colors.black,
+              leading: IconButton(
+                onPressed: () {
+                  scaffoldKey.currentState!.openDrawer();
+                },
+                icon: Icon(Icons.menu, color: Color(0XFF4EB7F2)),
+              ),
+            )
+          : null,
       backgroundColor: Color(0XFFF7F9FA),
       body: AdaptiveLayout(
         mobileLayout: (context) => MobileLayout(),
