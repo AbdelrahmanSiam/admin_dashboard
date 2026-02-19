@@ -1,6 +1,7 @@
 import 'package:admin_dashboard/views/widgets/custom_drawer.dart';
 import 'package:admin_dashboard/views/widgets/desktop_middle_section.dart';
 import 'package:admin_dashboard/views/widgets/income_section.dart';
+import 'package:admin_dashboard/views/widgets/mobile_layout.dart';
 import 'package:admin_dashboard/views/widgets/my_card_and_transaction_section.dart';
 import 'package:admin_dashboard/views/widgets/statistics_section.dart';
 import 'package:flutter/material.dart';
@@ -15,26 +16,11 @@ class TabletLayout extends StatelessWidget {
         Expanded(child: CustomDrawerSection()),
         SizedBox(width: 32),
         Expanded(
-          flex: 3,
-          child: SingleChildScrollView(
+            flex: 3,
             child: Padding(
-              padding: const EdgeInsets.only(top:32.0),
-              child: Column(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.only(right: 32.0),
-                    child: DesktopMiddleSection(),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(right: 32.0),
-                    child: StatisticsSection(),
-                  ),
-                  SizedBox(height: 24,),
-                ],
-              ),
-            ),
-          ),
-        ),
+              padding: EdgeInsets.only(top: 40),
+              child: MobileLayout(),
+            )),
       ],
     );
   }

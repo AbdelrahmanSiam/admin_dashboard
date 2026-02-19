@@ -28,22 +28,19 @@ class _MyCardAndTransactionSectionState extends State<MyCardAndTransactionSectio
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(top: 40.0),
-      child: CustomBackgroundContainer(
-        padding: 20,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text("My Card", style: AppStyles.styleSemiBold20(context)),
-            SizedBox(height: 20),
-            CardPageView(pageController: pageController,),
-            SizedBox(height: 20),
-            DotsIndicator(currentPageIndex: currentPageIndex,),
-            Divider(height: 40,color: Color(0XFFF1F1F1),),
-            TransactionSection(),
-          ],
-        ),
+    return CustomBackgroundContainer(
+      padding: 20,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text("My Card", style: AppStyles.styleSemiBold20(context)),
+          SizedBox(height: 20),
+          CardPageView(pageController: pageController,),
+          SizedBox(height: 20),
+          DotsIndicator(currentPageIndex: currentPageIndex,),
+          Divider(height: 40,color: Color(0XFFF1F1F1),),
+          TransactionSection(),
+        ],
       ),
     );
   }

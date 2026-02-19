@@ -4,9 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 class UserInfoListTile extends StatelessWidget {
-  const UserInfoListTile({
-    super.key, required this.userInfoTileModel,
-  });
+  const UserInfoListTile({super.key, required this.userInfoTileModel});
   final UserInfoTileModel userInfoTileModel;
   @override
   Widget build(BuildContext context) {
@@ -15,12 +13,27 @@ class UserInfoListTile extends StatelessWidget {
       color: Color(0XFFFAFAFA),
       child: IntrinsicWidth(
         child: ListTile(
-          leading: SvgPicture.asset(userInfoTileModel.image,height: 32,width: 32,),
-          title: Text(
-            userInfoTileModel.title,
-            style: AppStyles.styleSemiBold16(context),
+          leading: SvgPicture.asset(
+            userInfoTileModel.image,
+            height: 32,
+            width: 32,
           ),
-          subtitle: Text(userInfoTileModel.subTitle, style: AppStyles.styleRegular12(context)),
+          title: FittedBox(
+            alignment: AlignmentDirectional.centerStart,
+            fit: BoxFit.scaleDown,
+            child: Text(
+              userInfoTileModel.title,
+              style: AppStyles.styleSemiBold16(context),
+            ),
+          ),
+          subtitle: FittedBox(
+            alignment: AlignmentDirectional.centerStart,
+            fit: BoxFit.scaleDown,
+            child: Text(
+              userInfoTileModel.subTitle,
+              style: AppStyles.styleRegular12(context),
+            ),
+          ),
         ),
       ),
     );
