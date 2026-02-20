@@ -7,25 +7,28 @@ class CustomTextFieldWidget extends StatelessWidget {
   final CustomTextFiledModel customTextFiledModel;
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text(customTextFiledModel.title , style: AppStyles.styleMedium16(context),),
-        SizedBox(height: 12,),
-        TextField(
-          cursorColor: Color(0XFF4EB7F2),
-          decoration: InputDecoration(
-            filled: true,
-            fillColor: Color(0XFFFAFAFA),
-            hintText: customTextFiledModel.hintText,
-            hintStyle: AppStyles.styleRegular16(context).copyWith(color: Color(0XFFAAAAAA),),
-            border: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(12),
-              borderSide: BorderSide.none,
+    return Padding(
+      padding: const EdgeInsets.only(right: 8.0),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(customTextFiledModel.title , style: AppStyles.styleMedium16(context),),
+          SizedBox(height: 12,),
+          TextField(
+            cursorColor: Color(0XFF4EB7F2),
+            decoration: InputDecoration(
+              filled: true,
+              fillColor: Color(0XFFFAFAFA),
+              hintText: customTextFiledModel.hintText,
+              hintStyle: AppStyles.styleRegular16(context).copyWith(color: Color(0XFFAAAAAA),),
+              border: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(12),
+                borderSide: BorderSide.none,
+              ),
             ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }
