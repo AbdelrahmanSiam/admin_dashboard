@@ -21,11 +21,14 @@ class CustomAllExpensesCard extends StatelessWidget {
           children: [
             AllExpensesCardHeader(isActive: isActive, image: allExpensesModel.image),
             SizedBox(height: 34),
-            Text(
-              allExpensesModel.title,
-              style: isActive
-                  ? AppStyles.styleSemiBold16(context).copyWith(color: Colors.white)
-                  : AppStyles.styleSemiBold16(context),
+            FittedBox(
+              fit: BoxFit.scaleDown,
+              child: Text(
+                allExpensesModel.title,
+                style: isActive
+                    ? AppStyles.styleSemiBold16(context).copyWith(color: Colors.white)
+                    : AppStyles.styleSemiBold16(context),
+              ),
             ),
             SizedBox(height: 8),
             FittedBox(
