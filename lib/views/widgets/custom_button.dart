@@ -18,11 +18,14 @@ class CustomButton extends StatelessWidget {
           backgroundColor: isActive ? Color(0XFF4EB7F2) : Colors.white,
         ),
         onPressed: () {},
-        child: Text(
-          text,
-          style: isActive
-              ? AppStyles.styleSemiBold18(context).copyWith(color: Colors.white)
-              : AppStyles.styleSemiBold18(context),
+        child: FittedBox(
+          fit: BoxFit.scaleDown,
+          child: Text(
+            text,
+            style: isActive
+                ? AppStyles.styleSemiBold18(context).copyWith(color: Colors.white)
+                : AppStyles.styleSemiBold18(context),
+          ),
         ),
       ),
     );
