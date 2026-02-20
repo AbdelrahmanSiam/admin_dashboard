@@ -19,15 +19,9 @@ class ItemDetails extends StatelessWidget {
       title: FittedBox(
         fit: BoxFit.scaleDown,
         child: Text(
+          maxLines: 2,
           itemDetailsModel.title,
           style: AppStyles.styleRegular16(context).copyWith(color: Color(0XFF064061)),
-        ),
-      ),
-      trailing: FittedBox(
-        fit: BoxFit.scaleDown,
-        child: Text(
-          itemDetailsModel.percentage,
-          style: AppStyles.styleMedium16(context).copyWith(color: Color(0XFF208CC8)),
         ),
       ),
     );

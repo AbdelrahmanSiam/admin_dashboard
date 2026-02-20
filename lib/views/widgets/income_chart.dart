@@ -1,3 +1,4 @@
+import 'package:admin_dashboard/utils/app_styles.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 
@@ -28,27 +29,31 @@ class _IncomeChartState extends State<IncomeChart> {
       sectionsSpace: 0,
       sections: [
         PieChartSectionData(
+          title: "40%",
+          titleStyle: AppStyles.styleMedium16(context).copyWith(color: Colors.white),
           value: 40,
           color: Color(0XFF208BC7),
-          showTitle: false,
           radius: activeIndex == 0 ? 60 : 50,
         ),
         PieChartSectionData(
+          title: "25%",
+          titleStyle: AppStyles.styleMedium16(context).copyWith(color: Colors.white),
           value: 25,
           color: Color(0XFF4DB7F2),
-          showTitle: false,
           radius: activeIndex == 1 ? 60 : 50,
         ),
         PieChartSectionData(
+          title: "20%",
+          titleStyle: AppStyles.styleMedium16(context).copyWith(color: Colors.white),
           value: 20,
           color: Color(0XFF064060),
-          showTitle: false,
           radius: activeIndex == 2 ? 60 : 50,
         ),
         PieChartSectionData(
+          title: "22%",
+          titleStyle: AppStyles.styleMedium16(context).copyWith(color: Colors.white),
           value: 22,
           color: Color(0XFFE2DECD),
-          showTitle: false,
           radius: activeIndex == 3 ? 60 : 50,
         ),
       ],
