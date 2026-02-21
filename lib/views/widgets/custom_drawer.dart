@@ -43,7 +43,7 @@ class CustomDrawerSection extends StatelessWidget {
                     ),
                     isActive: false,
                   ),
-                  SizedBox(height: 48),
+                  Flexible(child: SizedBox(height: 48)),
                 ],
               ),
             ),
