@@ -13,7 +13,7 @@
 
 | Web | Desktop |
 |:---:|:-------:|
-| ![Web](web_view.png) | ![Desktop](desktop_view.png) |
+| ![Web](web_view.jpeg) | ![Desktop](desktop_view.png) |
 
 ---
 
